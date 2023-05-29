@@ -1,0 +1,11 @@
+.h2-counter {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+  color: rgb(79, 60, 186);
+}
+
+.h2-counter span{
+  font-weight: bold;
+}
