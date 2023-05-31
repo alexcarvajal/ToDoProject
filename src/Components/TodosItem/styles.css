@@ -39,10 +39,15 @@
   color: #4caf50;
 }
 
+.Icon-check:hover{
+  color:#4caf50;
+}
+
 .Icon-delete {
   position: absolute;
-  top: 2px;
+  top: -24px;
   right: 0;
+  
 }
 .Icon-delete:hover {
   color: red;

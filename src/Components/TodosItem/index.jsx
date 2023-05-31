@@ -1,25 +1,23 @@
+import {FaCheck}from 'react-icons/fa'
+import {GiCancel}from 'react-icons/Gi'
+
 import './styles.css'
 function TodosItem (props){
-    const onComplete = () => {
-        alert ('Completaste '+ props.text )
-      }
-      const onDelete= () => {
-        alert ('Borraste '+ props.text )
-      }
+   
 
       return(
         <li className="TodoItem">
             <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
-            onClick={onComplete}>
-            √
+            onClick={props.onComplete}>
+            <FaCheck />
             </span>
             <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
                 {props.text}
             </p>
             <span className="Icon Icon-delete"
-            onClick={onDelete}
+            onClick={props.onDelete}
             >
-              X
+              <GiCancel />
              </span>
         </li>
       )

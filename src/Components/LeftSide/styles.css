@@ -1,4 +1,7 @@
 .imageleft{
+    display: flex;
+    
     width: 40%;
-    height: auto;
+    height: 100vh;
+    
 }

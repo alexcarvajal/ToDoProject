@@ -1,8 +1,12 @@
-import './styles.css'
-function TodoCounter  ({total,completed})  {
+
+import "./styles.css";
+function TodoCounter({ total, completed }) {
   return (
-   <p className="h2-counter"> Checklist <span>{completed}</span> de <span>{total}</span></p>
-  )
+    <p className="h2-counter">
+      {completed === total ? "Completaste todos los items" : `Checklist ${completed} de ${total}`}
+     </p>
+
+  );
 }
 
-export default TodoCounter
+export default TodoCounter;
