@@ -3,8 +3,6 @@ import {GiCancel}from 'react-icons/Gi'
 
 import './styles.css'
 function TodosItem (props){
-   
-
       return(
         <li className="TodoItem">
             <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
