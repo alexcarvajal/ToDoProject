@@ -1,5 +1,5 @@
 import {FaCheck}from 'react-icons/fa'
-import {GiCancel}from 'react-icons/Gi'
+import {GiCancel}from 'react-icons/gi'
 
 import './styles.css'
 function TodosItem (props){
