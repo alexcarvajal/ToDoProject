@@ -1,19 +1,23 @@
 /* eslint-disable react/prop-types */
+import {useContext} from "react"
+import { TodoContext } from "../../Context";
 import './style.css'
 
- function TodoSearch ({search,setSearch}) {
-    const onSearchValueChange=(e)=>{
-        console.log(e.target.value);
-        setSearch(e.target.value);
-    }
+ function TodoSearch () {
+  const {
+    search,
+    setSearch,
+  } = useContext(TodoContext)
     return (
     <>
-    <input type="text"
-    className="TodoSearch"
-    placeholder="Search your Task"
-    value={search}
-    onChange={onSearchValueChange}
-    />
+      <input type="text"
+      className="TodoSearch"
+      placeholder="Search your Task"
+      value={search}
+      onChange={(event)=>
+      setSearch(event.target.value)
+      }
+      />
 
     </>
   )

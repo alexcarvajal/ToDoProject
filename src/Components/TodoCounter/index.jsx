@@ -1,11 +1,15 @@
-
+import { useContext } from "react";
 import "./styles.css";
-function TodoCounter({ total, completed }) {
+import { TodoContext } from "../../Context";
+function TodoCounter() {
+  const {
+    totalTodos,
+    CompletedTodos,
+  } = useContext(TodoContext)
   return (
     <p className="h2-counter">
-      {completed === total ? "Completaste todos los items" : `Checklist ${completed} de ${total}`}
-     </p>
-
+      {totalTodos === CompletedTodos ? "Completaste todos los items" : `Checklist ${CompletedTodos} de ${totalTodos}`}
+    </p>
   );
 }
 

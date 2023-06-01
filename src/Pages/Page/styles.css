@@ -13,6 +13,20 @@ margin: 0;
 height: 100vh;
 }
 .rightSide{
+display: flex;
+flex-direction: column;    
 width: 50%;
 padding: 30px;
+}
+
+.text-add{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(79, 60, 186);
+    font-weight: bold;
+}
+
+.add-icon{
+    display: flex;
+    margin: 40px auto;    
 }

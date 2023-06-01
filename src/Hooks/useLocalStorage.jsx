@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
 
-function useLocalStorage(itemName,initialValue){
+  const defaulttodos = [
+    { text: "Cortar element", completed: false },
+    { text: "Tomar element", completed: false },
+    { text: "Take element", completed: false },
+  ];
+  localStorage.setItem('TODOS_v1', JSON.stringify(defaulttodos));
+   
 
+
+function useLocalStorage(itemName,initialValue){
   const[item, setItem]= useState(initialValue)
   const[loading, setLoading]= useState(true)
   const [error,setError]=useState(false)
@@ -24,7 +32,7 @@ function useLocalStorage(itemName,initialValue){
           setLoading(false)
           setError(true)
         }
-      }, 30000);
+      }, 5000);
   },[initialValue,itemName])
 
 
@@ -41,3 +49,4 @@ function useLocalStorage(itemName,initialValue){
   }
 
   export default useLocalStorage
+

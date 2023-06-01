@@ -1,20 +1,11 @@
- 
 import './styles.css'
-
-const onClickButton = (msg) => {
-    alert(msg);
-  };
-  
-   function TodoButton (props) {
+   function TodoButton ({setOpenModal}) {
     return (
       <>
       <button className="CreateTodoButton"
-      onClick={() => onClickButton('alerta')}
+      onClick={() => setOpenModal(state=>!state)}
       >+</button>
-  
       </>
     )
   }
-  
-  
   export default TodoButton;
