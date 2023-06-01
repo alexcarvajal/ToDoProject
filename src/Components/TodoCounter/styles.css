@@ -3,7 +3,7 @@
   text-align: center;
   margin: 0;
   padding: 30px;
-  color: rgb(79, 60, 186);
+  color: var(--Wild-sand);
 }
 
 .h2-counter span{

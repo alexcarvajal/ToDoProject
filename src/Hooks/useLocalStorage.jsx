@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 
-  const defaulttodos = [
+ /*  const defaulttodos = [
     { text: "Cortar element", completed: false },
     { text: "Tomar element", completed: false },
     { text: "Take element", completed: false },
   ];
   localStorage.setItem('TODOS_v1', JSON.stringify(defaulttodos));
-   
-
-
-function useLocalStorage(itemName,initialValue){
+ */
+/* localStorage.removeItem('TODOS_v1')
+ */function useLocalStorage(itemName,initialValue){
   const[item, setItem]= useState(initialValue)
   const[loading, setLoading]= useState(true)
   const [error,setError]=useState(false)

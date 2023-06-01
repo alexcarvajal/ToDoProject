@@ -12,8 +12,6 @@ function TodoProvider ({children}){
     const [search, setSearch] = useState("");
     const [openModal, setOpenModal] = useState(false);
     
- 
-
     const CompletedTodos = todos.filter(
         (todos) => todos.completed === true
     ).length;
@@ -24,6 +22,16 @@ function TodoProvider ({children}){
         const searchText = search.toLocaleLowerCase();
         return todoText.includes(searchText);
     });
+
+    const addTodo = (text) =>{
+        const newTodos = [...todos];
+        newTodos.push({
+            text,
+            completed: false,}
+        )
+        saveTodos(newTodos);
+    }
+
     const completeTodo = (text) => {
         const newTodos = [...todos];
         const todoIndex = newTodos.findIndex((todo) => todo.text == text);
@@ -50,6 +58,7 @@ function TodoProvider ({children}){
             setSearch,
             openModal,
             setOpenModal,
+            addTodo
         }}>
             {children}
         </TodoContext.Provider>

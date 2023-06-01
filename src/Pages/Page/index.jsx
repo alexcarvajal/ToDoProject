@@ -7,6 +7,7 @@ import LoadingIcon from "../../assets/LoadingIcon"
 import TodosItem from "../../Components/TodosItem"
 import TodoButton from "../../Components/TodoButton"
 import Modal from "../../Components/Modal"
+import TodoForm from "../../Components/TodoForm"
 import {useContext} from "react"
 import './styles.css'
 function Page () {
@@ -30,8 +31,8 @@ function Page () {
             {error && <p>error!! </p>}
             {!loading && searchedTodos.length == 0 && 
             <p className="text-add">
-              <img className="add-icon" src="/public/agregar.gif"  alt=""/>
-              Put a to do ! 
+             {/*  <img className="add-icon" src="/agregar.gif"  alt=""/> */}
+              Put a task ! 
               </p>}
             {searchedTodos.map((todos) => (
               <TodosItem
@@ -45,7 +46,9 @@ function Page () {
           </TodoList>
         <TodoButton setOpenModal={setOpenModal}/>
         {openModal && (
-          <Modal>Hola Hola</Modal>
+          <Modal>
+            <TodoForm />
+          </Modal>
         )}
       </div>
     </div>

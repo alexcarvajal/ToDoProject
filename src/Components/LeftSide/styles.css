@@ -1,7 +1,8 @@
 .imageleft{
     display: flex;
-    
-    width: 40%;
+    width: 50%;
     height: 100vh;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     
 }
